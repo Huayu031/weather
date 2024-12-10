@@ -8,7 +8,7 @@ app_id = os.getenv("APP_ID")
 app_secret = os.getenv("APP_SECRET")
 openid = os.getenv("OPENID")
 hefeng_api_key = os.getenv("HEFENG_API_KEY")
-templateId = os.getenv("TEMPLATE_ID")
+
 # 恋爱开始的日期
 love_start_date = datetime(2024, 11, 22)
 
@@ -104,7 +104,7 @@ def send_message():
     # 生成模板消息数据
     message_data = {
         "touser": openid,
-        "template_id": templateId,
+        "template_id":	"FpaxwnbsnOS94aDCHngi4Y0B2tAFXw1skE3ml_BM2jQ",
         "data": {
             "first": {"value": "你好！", "color": "#173177"},
             "date": {"value": str(today.date()), "color": "#173177"},
