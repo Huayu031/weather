@@ -4,10 +4,10 @@ import random
 from datetime import datetime
 
 # 获取环境变量
-app_id = os.getenv("APP_ID")
-app_secret = os.getenv("APP_SECRET")
-openid = os.getenv("OPENID")
-hefeng_api_key = os.getenv("HEFENG_API_KEY")
+app_id = "wx9c17d2ffce0e489e"  # 替换成你的公众号的 AppID
+app_secret = "08104cab40adb2bde4476069e4bab08b"  # 替换成你的公众号的 AppSecret
+openid = "o603S6X7MkTBvEzPpWm-gDZQn-V8"  # 替换成实际用户的 openid
+hefeng_api_key = "df95c9c800344ed39ec2b4bc31f531b3"  # 替换成你的和风天气 API 密钥
 
 # 恋爱开始的日期
 love_start_date = datetime(2024, 11, 22)
@@ -104,7 +104,7 @@ def send_message():
     # 生成模板消息数据
     message_data = {
         "touser": openid,
-        template_id": "FpaxwnbsnOS94aDCHngi4Y0B2tAFXw1skE3ml_BM2jQ",
+        "template_id": "FpaxwnbsnOS94aDCHngi4Y0B2tAFXw1skE3ml_BM2jQ",
         "data": {
             "first": {"value": "你好！", "color": "#173177"},
             "date": {"value": str(today.date()), "color": "#173177"},
