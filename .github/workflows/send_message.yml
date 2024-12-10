@@ -1,0 +1,31 @@
+name: Daily WeChat Push
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 每天早上8点执行
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  send_message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run the Python script
+        run: python send_message.py
+        env:
+          APP_ID: ${{ secrets.APP_ID }}
+          APP_SECRET: ${{ secrets.APP_SECRET }}
+          OPENID: ${{ secrets.OPENID }}
+          HEFENG_API_KEY: ${{ secrets.HEFENG_API_KEY }}
