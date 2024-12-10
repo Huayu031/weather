@@ -104,7 +104,7 @@ def send_message():
     # 生成模板消息数据
     message_data = {
         "touser": openid,
-        "template_id":	"FpaxwnbsnOS94aDCHngi4Y0B2tAFXw1skE3ml_BM2jQ",
+        template_id": "FpaxwnbsnOS94aDCHngi4Y0B2tAFXw1skE3ml_BM2jQ",
         "data": {
             "first": {"value": "你好！", "color": "#173177"},
             "date": {"value": str(today.date()), "color": "#173177"},
