@@ -2,7 +2,7 @@ name: Daily WeChat Push
 
 on:
   schedule:
-    - cron: "30 15 * * * "  # 每天早上8点执行
+    - cron: "0 22 * * * "  # 每天早上8点执行
   workflow_dispatch:  # 支持手动触发
 
 jobs:
