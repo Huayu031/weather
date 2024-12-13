@@ -25,7 +25,7 @@ girlfriend_birthday = datetime(datetime.today().year, 1, 12)  # 女友的生日
 today = datetime.today()
 
 # 计算恋爱的第几天
-days_in_love = (today - love_start_date).days + 1
+days_in_love = (today - love_start_date).days + 2
 
 # 计算下一个生日
 def days_until_next_birthday(birthday):
@@ -34,8 +34,8 @@ def days_until_next_birthday(birthday):
     return (birthday - today).days
 
 # 计算距离下一个生日的天数
-my_birthday_days_left = days_until_next_birthday(my_birthday)
-girlfriend_birthday_days_left = days_until_next_birthday(girlfriend_birthday)
+my_birthday_days_left = days_until_next_birthday(my_birthday)-1
+girlfriend_birthday_days_left = days_until_next_birthday(girlfriend_birthday)-1
 
 # 每日寄语
 daily_quotes = [
