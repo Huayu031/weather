@@ -34,8 +34,8 @@ def days_until_next_birthday(birthday):
     return (birthday - today).days
 
 # 计算距离下一个生日的天数
-my_birthday_days_left = days_until_next_birthday(my_birthday)-1
-girlfriend_birthday_days_left = days_until_next_birthday(girlfriend_birthday)-1
+my_birthday_days_left = days_until_next_birthday(my_birthday)
+girlfriend_birthday_days_left = days_until_next_birthday(girlfriend_birthday)
 
 # 每日寄语
 daily_quotes = [
